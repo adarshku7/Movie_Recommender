@@ -57,7 +57,7 @@ def get_suggestions():
 app = Flask(__name__)
 
 @app.route("/")
-@app.route("/home",methods=["GET"])
+@app.route("/home")
 def home():
     suggestions = get_suggestions()
     return render_template('home.html',suggestions=suggestions)
